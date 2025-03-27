@@ -15,24 +15,32 @@ body {
     text-align: center;
     color: #333;
 }
+nav {
+    background: #ff6666;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
 header {
     background-color: #ff9999;
-    padding: 40px;
+    padding: 80px 40px 40px;
     color: white;
 }
 h1 {
-    h1 {
     margin: 0;
-    font-size: 4em; /* Zvýšení velikosti písma */
+    font-size: 3em;
     font-family: 'Luckiest Guy', cursive;
-    background: linear-gradient(45deg, #ff0000, #ff7300, #ffd700, #32cd32, #1e90ff, #8a2be2);
-    .element {
-  -webkit-background-clip: text; /* For WebKit browsers */
-  background-clip: text; /* Standard property */
-}
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-}
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 p {
     font-size: 1.2em;
@@ -46,6 +54,7 @@ p {
     border-radius: 10px;
 }
 section {
+    padding: 100px 20px;
     margin-bottom: 30px;
 }
 .gallery {
@@ -88,6 +97,12 @@ footer {
 </head>
 <body>
 
+<nav>
+    <a href="#about">O nás</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
 <header>
 <h1>Ksychtíkovo - Malování na obličej</h1>
 <p>Proměním vaše tváře v kouzelné umělecké dílo!</p>
@@ -95,44 +110,50 @@ footer {
 
 <div class="container">
 
-<section>
+<section id="about">
 <h2>O nás</h2>
 <p>Jmenuji se Michaela Podmolová a věnuji se profesionálnímu malování na obličej. Každý obličej je pro mě plátnem, na kterém vytvářím jedinečné kouzelné motivy pro děti i dospělé.</p>
-</section>
 
-<section>
-<h2>Naše služby</h2>
-<ul style="list-style-type: none; padding: 0; font-size: 1.2em;">
-<li>👧 Dětské oslavy – proměníme malé hosty v princezny, superhrdiny nebo roztomilé zvířátka.</li>
-<li>🎭 Firemní akce & festivaly – originální designy, které nadchnou vaše hosty.</li>
-<li>🎃 Tematické večírky – Halloween, karneval, masopust? Dokonalé líčení zaručeno!</li>
+<p>Ksychtíkovo.cz – Zábava, na kterou se můžete spolehnout!
+
+    Hledáte někoho, kdo dorazí na vaši akci včas, připravený a s jistotou, že se nikdo nebude nudit? Pak jste tu správně!
+    
+    S Ksychtíkem máte jistotu, že bude o zábavu postaráno. Přijedu vždy včas, s energií a nápady, které rozproudí atmosféru a pobaví každého. Profesionální přístup a spolehlivost jsou pro mě samozřejmostí – ať už jde o firemní večírek, dětskou oslavu nebo jakoukoli jinou událost, kde je smích a dobrá nálada vítána.
+    
+    Chcete zažít akci, na kterou budete ještě dlouho vzpomínat? Kontaktujte mě a užijeme si to spolu! 🎭 </p>
+<h3>Naše služby</h3>
+<ul>
+    <li>🎨 Dětské oslavy – proměníme malé hosty v princezny, superhrdiny nebo roztomilé zvířátka.</li>
+    <li>🎭 Firemní akce & festivaly – originální designy, které nadchnou vaše hosty.</li>
+    <li>🎃 Tematické večírky – Halloween, karneval, masopust? Dokonalé líčení zaručeno!</li>
 </ul>
+
 </section>
 
-<section>
+<section id="gallery">
 <h2>Galerie motivů</h2>
 <div class="gallery">
-<img src="https://pinkappicons.com/wp-content/uploads/2025/01/Face-Painting-Ideas-Cute.webp" alt="Malování na obličej - tygr">
-<img src="https://i.pinimg.com/736x/e9/93/57/e993575bbfa5efb63e1cc2f7ef4b187f.jpg" alt="Malování na obličej - motýl">
-<img src="https://i.pinimg.com/originals/13/af/67/13af67aee511f756321b170a5367d977.jpg" alt="Malování na obličej - mořská panna">
+<img src="https://i.pinimg.com/originals/13/af/67/13af67aee511f756321b170a5367d977.jpg" alt="Mořská panna">
+<img src="https://i.pinimg.com/736x/e9/93/57/e993575bbfa5efb63e1cc2f7ef4b187f.jpg" alt="Motýl">
+<img src="https://pinkappicons.com/wp-content/uploads/2025/01/Face-Painting-Ideas-Cute.webp" alt="Tygr">
 </div>
 <p><strong>...a mnoho dalších motivů!</strong></p>
 </section>
 
-<section>
-<h2>Ceník</h2>
-<p>🕐 60 minut: <strong>800 Kč</strong></p>
-<p>🕒 120 minut: <strong>1500 Kč</strong></p>
-<p>🕓 4 hodiny: <strong>2000 Kč</strong></p>
-<p>🌟 Celodenní akce: <strong>dohodou</strong></p>
-</section>
+<section id="contact">
 
-<section>
 <h2>Kontakt</h2>
+
 <p><strong>Michaela Podmolová</strong></p>
 <p>📞 Telefon: <strong>+420 728 500 091</strong></p>
-<p>📧 Email: <strong>info@ksychtikovo.cz</strong></p>
-<a href="mailto:info@ksychtikovo.cz" class="button">Rezervujte nyní!</a>
+<p>📧 Email: <strong>podmolovam@gmail.com</strong></p>
+<a href="mailto:podmolovam@gmail.com" class="button">Rezervujte nyní!</a>
+<p>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Facebook_Logo_2023.png" alt="Facebook Logo" width="40">
+        Navštivte naše Facebook stránky
+    </a>
+</p>
 </section>
 
 </div>
