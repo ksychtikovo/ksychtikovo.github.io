@@ -106,6 +106,7 @@
       margin-top: 30px;
     }
   </style>
+    
 </head>
 <body>
 
@@ -139,11 +140,49 @@
   <section id="gallery">
     <h2>Galerie motivů</h2>
     <div class="gallery">
-      <img src="https://i.pinimg.com/originals/13/af/67/13af67aee511f756321b170a5367d977.jpg" alt="Mořská panna" loading="lazy">
-      <img src="https://i.pinimg.com/736x/e9/93/57/e993575bbfa5efb63e1cc2f7ef4b187f.jpg" alt="Motýl" loading="lazy">
-      <img src="https://pinkappicons.com/wp-content/uploads/2025/01/Face-Painting-Ideas-Cute.webp" alt="Tygr" loading="lazy">
+      <img src="tygrik.png" alt="tygřík" loading="lazy">
+      <img src="SpiderGwen.jpg" alt="pavouček" loading="lazy">
+      <img src="ufo.jpg" alt="unicorn" loading="lazy">
     </div>
     <p><strong>...a mnoho dalších motivů!</strong></p>
+    <!-- Přidej do <head> na stránce -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Slider -->
+<div class="swiper-container" style="width: 100%; max-width: 350px; margin: auto;">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="tygrik.png" style="width: 100%; border-radius: 10px;"></div>
+    <div class="swiper-slide"><img src="frozen Elsa.png" style="width: 100%; border-radius: 10px;"></div>
+    <div class="swiper-slide"><img src="SpiderGwen.jpg" style="width: 100%; border-radius: 10px;"></div>
+    <div class="swiper-slide"><img src="ufo.jpg" style="width: 100%; border-radius: 10px;"></div>
+  </div>
+
+  <!-- Tlačítka -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Inicializace Swiperu s autoplay -->
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    grabCursor: true,
+    autoplay: {
+      delay: 3000, // přechod každé 3 sekundy
+      disableOnInteraction: false, // nepřestane se přehrávat po kliknutí
+    },
+  });
+</script>
+
+
+        
   </section>
 
   <section id="pricing">
