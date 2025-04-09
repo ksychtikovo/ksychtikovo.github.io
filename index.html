@@ -168,8 +168,8 @@
 <div class="container">
 
   <section id="about">
-    <h2>O nás</h2>
-    <img src="hero.jpg" style="width: 50%; border-radius: 10px;">
+    <h2></h2>
+    <img src="hero.jpg" style="width: 60%; border-radius: 10px;">
     <p>Jmenuji se Michaela Podmolová a věnuji se profesionálnímu malování na obličej. Každý obličej je pro mě plátnem, na kterém vytvářím jedinečné kouzelné motivy pro děti i dospělé.
 
         Ksychtíkovo.cz – Zábava, na kterou se můžete spolehnout! Hledáte někoho, kdo dorazí na vaši akci včas, připravený a s jistotou, že se nikdo nebude nudit? Pak jste tu správně!
@@ -273,6 +273,33 @@
 <footer>
   <p>&copy; 2025 Ksychtíkovo - Malování na obličej | Facepainting Morava a celá ČR</p>
 </footer>
+<!-- Cookie Consent by Osano -->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: "#ff9999",
+        text: "#ffffff"
+      },
+      button: {
+        background: "#ffffff",
+        text: "#ff6666"
+      }
+    },
+    theme: "classic",
+    position: "bottom",
+    content: {
+      message: "Na této stránce používáme cookies pro zajištění správného fungování a analýzu návštěvnosti.",
+      dismiss: "Rozumím",
+      link: "Zjistit více",
+      href: "/gdpr.html"  <!-- změň na správnou URL podstránky s informacemi o ochraně osobních údajů -->
+    }
+  });
+});
+</script>
 </body>
 </html>
