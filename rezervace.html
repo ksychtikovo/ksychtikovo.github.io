@@ -48,35 +48,32 @@
     <h2>Rezervační formulář</h2>
     <form action="rezervace-mail.php" method="post">
         <!-- zbytek formuláře -->
+
+      <form action="https://formsubmit.co/podmolovam@gmail.com" method="POST">
+  
+  <input type="hidden" name="_subject" value="Nová rezervace z Ksychtikovo!">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://www.ksychtikovo.cz/dekujeme.html">
+
+  <label for="datum">Den akce *</label>
+  <input type="date" name="Den akce" required>
+
+  <label for="hodiny">Počet hodin *</label>
+  <input type="number" name="Počet hodin" required>
+
+  <label for="telefon">Telefon *</label>
+  <input type="tel" name="Telefon" required>
+
+  <label for="email">Email *</label>
+  <input type="email" name="Email" required>
+
+  <label for="firma">Firma (volitelné)</label>
+  <input type="text" name="Firma">
+
+  <button type="submit">Odeslat rezervaci</button>
+</form>
       </form>
-      
-    
-      <label for="jmeno">Jméno *</label>
-      <input type="text" id="jmeno" name="jmeno" required>
-
-      <label for="prijmeni">Příjmení *</label>
-      <input type="text" id="prijmeni" name="prijmeni" required>
-
-      <label for="firma">Firma (volitelné)</label>
-      <input type="text" id="firma" name="firma">
-
-      <label for="datum">Den akce *</label>
-      <input type="date" id="datum" name="datum" required>
-
-      <label for="hodiny">Počet hodin *</label>
-      <input type="number" id="hodiny" name="hodiny" min="1" required>
-
-      <label for="telefon">Telefon *</label>
-      <input type="tel" id="telefon" name="telefon" required>
-
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="poznámka">Firma (volitelné)</label>
-      <input type="text" id="firma" name="firma">
-
-      <button type="submit">Odeslat rezervaci</button>
-    </form>
   </div>
 </body>
 </html>
