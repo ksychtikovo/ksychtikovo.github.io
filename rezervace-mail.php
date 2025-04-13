@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Příjemce
     $to = "podmolovam@gmail.cz"; // Sem dej svůj e-mail
