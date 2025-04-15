@@ -1,79 +1,123 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rezervace - Ksychtíkovo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezervace – Ksychtíkovo</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff4f4;
-      padding: 20px;
+      padding: 2rem;
+      background-color: #fdf6f9;
     }
-    .form-container {
+    h1 {
+      color: #d23669;
+    }
+    form {
       max-width: 600px;
-      margin: auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #ff6666;
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
     }
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
+      padding: 0.6rem;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 4px;
     }
     button {
-      background-color: #ff6666;
+      margin-top: 1.5rem;
+      background-color: #d23669;
       color: white;
       border: none;
-      padding: 15px 30px;
-      border-radius: 10px;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 1em;
     }
     button:hover {
-      background-color: #e60000;
+      background-color: #a81f4e;
+    }
+    .success {
+      background-color: #d4edda;
+      padding: 1rem;
+      border-radius: 5px;
+      color: #155724;
+      margin-bottom: 1rem;
+    }
+    .error {
+      background-color: #f8d7da;
+      padding: 1rem;
+      border-radius: 5px;
+      color: #721c24;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Rezervační formulář</h2>
-    <form action="rezervace-mail.php" method="post">
-        <!-- zbytek formuláře -->
+  <h1>Rezervace – Ksychtíkovo</h1>
 
-      <form action="https://formsubmit.co/bulapite@mailgolem.com" method="POST">
-  
-  <input type="hidden" name="_subject" value="Nová rezervace z Ksychtikovo!">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://www.ksychtikovo.cz/dekujeme.html">
+  <!-- Úspěšné odeslání -->
+  <div id="form-status"></div>
 
-  <label for="datum">Den akce *</label>
-  <input type="date" name="Den akce" required>
+  <form action="https://formspree.io/f/vaazgvgk" method="POST" id="rezervace-form">
+    <label for="jmeno">Jméno*</label>
+    <input type="text" id="jmeno" name="Jméno" required />
 
-  <label for="hodiny">Počet hodin *</label>
-  <input type="number" name="Počet hodin" required>
+    <label for="prijmeni">Příjmení*</label>
+    <input type="text" id="prijmeni" name="Příjmení" required />
 
-  <label for="telefon">Telefon *</label>
-  <input type="tel" name="Telefon" required>
+    <label for="firma">Firma</label>
+    <input type="text" id="firma" name="Firma" />
 
-  <label for="email">Email *</label>
-  <input type="email" name="Email" required>
+    <label for="datum">Požadované datum*</label>
+    <input type="date" id="datum" name="Datum" required />
 
-  <label for="firma">Firma (volitelné)</label>
-  <input type="text" name="Firma">
+    <label for="hodiny">Počet hodin*</label>
+    <input type="number" id="hodiny" name="Počet hodin" required min="1" max="12" />
 
-  <button type="submit">Odeslat rezervaci</button>
-</form>
-      </form>
-  </div>
+    <label for="telefon">Telefon*</label>
+    <input type="tel" id="telefon" name="Telefon" required />
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="Email" required />
+
+    <label for="poznamka">Poznámka</label>
+    <textarea id="poznamka" name="Poznámka" rows="4"></textarea>
+
+    <button type="submit">Odeslat rezervaci</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('rezervace-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = form.getAttribute('action');
+
+      const response = await fetch(action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        status.innerHTML = "<div class='success'>Děkujeme! Rezervace byla úspěšně odeslána.</div>";
+        form.reset();
+      } else {
+        status.innerHTML = "<div class='error'>Došlo k chybě při odesílání. Zkuste to prosím znovu.</div>";
+      }
+    });
+  </script>
 </body>
 </html>
