@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <!-- Snipcart CSS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vlastní styl -->
+  <style>
+    :root {
+      --primary-color: #ff6f91;
+      --secondary-color: #ffb6b9;
+      --background-color: #f9f6f2;
+      --text-color: #333;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--white);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--primary-color);
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe3e6;
+    }
+
+    section.category {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section.category h2 {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      background-color: var(--white);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .product h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .product p {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    select, button.snipcart-add-item {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+    }
+
+    button.snipcart-add-item {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    button.snipcart-add-item:hover {
+      background-color: #ff3c61;
+    }
+
+    label {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      display: block;
+      text-align: left;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+     /* Hero sekce (banner) */
+  .hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 6rem 1rem;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  /* Hezčí animace u produktů */
+  .product {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .product:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .product img {
+    transition: transform 0.4s ease;
+  }
+
+  .product:hover img {
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+          <h1>Vítejte v Ksychtíkově E-shopu!</h1>
+          <p>Vyberte si ten nejkrásnější malovaný motiv pro ženy, muže i děti ✨</p>
+          <a href="#zeny" class="btn">Prozkoumat nabídku</a>
+        </div>
+      </header>
+
+<header>
+  <h1>Ksychtíkův E-shop</h1>
+</header>
+
+<nav>
+  <a href="#zeny">Ženy</a>
+  <a href="#muzi">Muži</a>
+  <a href="#deti">Děti</a>
+  <button class="snipcart-checkout">Košík</button>
+</nav>
+
+<main>
+
+  <!-- Sekce Ženy -->
+  <section id="zeny" class="category">
+    <h2>Pro ženy</h2>
+    <div class="products">
+      
+      <!-- Produkt 1 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200/ffb6b9/ffffff?text=Motiv+Ženy+1" alt="Motiv pro ženy 1">
+        <h3>Motiv Květiny</h3>
+        <p>350 Kč</p>
+        <label for="size-women1">Velikost:</label>
+        <select id="size-women1">
+          <option>Malé</option>
+          <option>Střední</option>
+          <option>Velké</option>
+          <option>Extra velké</option>
+          <option>Mega</option>
+        </select>
+
+        <label for="color-women1">Barva:</label>
+        <select id="color-women1">
+          <option>Růžová</option>
+          <option>Modrá</option>
+          <option>Fialová</option>
+          <option>Zelená</option>
+          <option>Žlutá</option>
+        </select>
+
+        <button 
+          class="snipcart-add-item"
+          data-item-id="women-1"
+          data-item-name="Motiv Květiny"
+          data-item-price="350"
+          data-item-url="/"
+          data-item-description="Malování květinového motivu pro ženy."
+          data-item-custom1-name="Velikost"
+          data-item-custom1-options="Malé|Střední|Velké|Extra velké|Mega"
+          data-item-custom2-name="Barva"
+          data-item-custom2-options="Růžová|Modrá|Fialová|Zelená|Žlutá">
+          Přidat do košíku
+        </button>
+      </div>
+
+      <!-- Další produkty žen zde... -->
+
+    </div>
+  </section>
+
+  <!-- Sekce Muži -->
+  <section id="muzi" class="category">
+    <h2>Pro muže</h2>
+    <div class="products">
+      
+      <!-- Produkt 2 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200/8ec5fc/ffffff?text=Motiv+Muži+1" alt="Motiv pro muže 1">
+        <h3>Motiv Tribal</h3>
+        <p>400 Kč</p>
+        <label for="size-men1">Velikost:</label>
+        <select id="size-men1">
+          <option>Malé</option>
+          <option>Střední</option>
+          <option>Velké</option>
+          <option>Extra velké</option>
+          <option>Mega</option>
+        </select>
+
+        <label for="color-men1">Barva:</label>
+        <select id="color-men1">
+          <option>Černá</option>
+          <option>Modrá</option>
+          <option>Červená</option>
+          <option>Zelená</option>
+          <option>Oranžová</option>
+        </select>
+
+        <button 
+          class="snipcart-add-item"
+          data-item-id="men-1"
+          data-item-name="Motiv Tribal"
+          data-item-price="400"
+          data-item-url="/"
+          data-item-description="Tribal motiv pro muže."
+          data-item-custom1-name="Velikost"
+          data-item-custom1-options="Malé|Střední|Velké|Extra velké|Mega"
+          data-item-custom2-name="Barva"
+          data-item-custom2-options="Černá|Modrá|Červená|Zelená|Oranžová">
+          Přidat do košíku
+        </button>
+      </div>
+
+      <!-- Další produkty mužů zde... -->
+
+    </div>
+  </section>
+
+  <!-- Sekce Děti -->
+  <section id="deti" class="category">
+    <h2>Pro děti</h2>
+    <div class="products">
+      
+      <!-- Produkt 3 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200/ffeaa7/333333?text=Motiv+Děti+1" alt="Motiv pro děti 1">
+        <h3>Motiv Zvířátko</h3>
+        <p>300 Kč</p>
+        <label for="size-kids1">Velikost:</label>
+        <select id="size-kids1">
+          <option>Malé</option>
+          <option>Střední</option>
+          <option>Velké</option>
+          <option>Extra velké</option>
+          <option>Mega</option>
+        </select>
+
+        <label for="color-kids1">Barva:</label>
+        <select id="color-kids1">
+          <option>Žlutá</option>
+          <option>Modrá</option>
+          <option>Zelená</option>
+          <option>Růžová</option>
+          <option>Oranžová</option>
+        </select>
+
+        <button 
+          class="snipcart-add-item"
+          data-item-id="kids-1"
+          data-item-name="Motiv Zvířátko"
+          data-item-price="300"
+          data-item-url="/"
+          data-item-description="Malování zvířátek pro děti."
+          data-item-custom1-name="Velikost"
+          data-item-custom1-options="Malé|Střední|Velké|Extra velké|Mega"
+          data-item-custom2-name="Barva"
+          data-item-custom2-options="Žlutá|Modrá|Zelená|Růžová|Oranžová">
+          Přidat do košíku
+        </button>
+      </div>
+
+      <!-- Další produkty dětí zde... -->
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Snipcart košík -->
+<div hidden id="snipcart" data-api-key="TVŮJ_PUBLIC_API_KEY"></div>
+<script>
+    window.SnipcartSettings = {
+      publicApiKey: "YOUR_API_KEY",
+      loadStrategy: "on-user-interaction",
+    };
+  
+    (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+  </script>
+<!-- Snipcart JS -->
+<script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+
+</body>
+</html>
