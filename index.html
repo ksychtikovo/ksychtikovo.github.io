@@ -370,6 +370,7 @@
         .review-button {
           display: flex;
           align-items: center;
+          justify-content: center;  /* Tlačítka zarovnáme i horizontálně */
           padding: 12px 20px;
           border-radius: 8px;
           text-decoration: none;
@@ -380,12 +381,14 @@
           border: 2px solid #ddd;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
           color: #333;
+          min-width: 180px; /* aby tlačítka byla stejné velikosti */
         }
       
         .review-button img {
           width: 24px;
           height: 24px;
           margin-right: 10px;
+          flex-shrink: 0;
         }
       
         .google-btn {
@@ -424,6 +427,7 @@
           .review-button {
             width: 100%;
             justify-content: center;
+            min-width: unset;
           }
         }
       </style>
@@ -437,11 +441,11 @@
       
         <div class="review-buttons">
           <a href="https://www.google.com/maps/place/Ksycht%C3%ADkovo/@0,0,9z/data=!4m8!3m7!1s0x2216ee8cfddf7c45:0x891221a0de9217a4!8m2!3d49.611411!4d17.7993723!9m1!1b1!16s%2Fg%2F11x913441l?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="review-button google-btn" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo">
+            <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDI4NUY0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTcuMjIgMTJsMS4xOC00LjVoMi4zNXYyLjdoMS4zYzAtMS4xLjUtMS45IDEuOC0xLjloMi4xYTIuMyAyLjMgMCAwIDEgMi40IDIuMlYxM2gyLjN2MS41aC0yLjN2My40YTIuMyAyLjMgMCAwIDEtMi40IDIuMmgtMi4xYy0xLjkgMC0yLjQtMS4zLTIuNC0xLjN2LTIuM2gtMi40di0xLjVoMi4ydi0xLjd6Ii8+PC9zdmc+" alt="Google logo">
             Google recenze
           </a>
           <a href="https://www.firmy.cz/detail/13821951-ksychtikovo-malovani-na-oblicej-lesna.html" target="_blank" class="review-button firmy-btn" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Seznam.cz_logo.svg/2560px-Seznam.cz_logo.svg.png" alt="Firmy.cz logo" style="width:26px;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAAtRJREFUSImt1T9oFFEUgOHPgZEk2fWMyRMyLjCIoLHAxiiIgWHiYMxhEV8Qn7DFhQ7EW5qjX/wLNSSfY4NzWcxFiUoXi3M5uFZHGmSMTWk6m/HUnv7JpzI6Ecwzu/fec79z/9+wlEYvZPAOnIMVvvevILIXrC0HLPtxOSsso4MxDbs1hE2shAiPFDdLfQfVbnItDGk8KJPe4E7sqDPAKlfVZEGNwbH1aTkuJz3aG0hb0v5WyD28kE8ZT6ScRiFu0cIVUtSjA/53S/lnWkJ/Bt/RxnNWxTsqKo0tx3WiNvlZ9HXpHQy7dgh6OkZFkf6D63ZfJVNHLFMmhM9XAJtRZ96RsGZAw+L2whxNYeM01IxXbkjAvkMTcq2PqRM7b0ybRA8uO5R36tj+u9F0TtE/6zNeR+jN03C5psRc7ZMoHReiOy/5/llNJOXMj5FOPj68/SycoYz9nk9cF+uIytF0G0y+hMY3+/P+gJfY2MNRKPgNtfVxdwDktIRDAAAAAElFTkSuQmCC" alt="Firmy.cz logo" style="width:24px; height:24px;">
             Firmy.cz recenze
           </a>
           <a href="https://www.facebook.com/ksychtíkovo/reviews" target="_blank" class="review-button fb-btn" rel="noopener noreferrer">
