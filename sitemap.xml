@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Hlavní stránky -->
   <url>
     <loc>https://www.ksychtikovo.cz/</loc>
-    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/o-nas.html</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://www.ksychtikovo.cz/nabidka</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ksychtikovo.cz/galerie</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/galerie.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/caste-dotazy</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ksychtikovo.cz/kontakt</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/cenik.html</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://www.ksychtikovo.cz/recenze</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog články -->
+  <url>
+    <loc>https://www.ksychtikovo.cz/blog</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/kontakt.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ksychtikovo.cz/clanek-1.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/jak-probiha-malovani-na-oblicej</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-2.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/nejcastejsi-motivy-malovani</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-3.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/malovani-na-oslavach</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-4.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/bezpecnost-a-hygiena</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-5.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/malovani-pro-firemni-akce</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-6.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ksychtikovo.cz/blog/malovani-ve-skolce-a-skole</loc>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Právní stránky -->
+  <url>
+    <loc>https://www.ksychtikovo.cz/obchodni-podminky</loc>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.ksychtikovo.cz/clanek-7.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.ksychtikovo.cz/gdpr</loc>
+    <priority>0.3</priority>
   </url>
+
 </urlset>
