@@ -213,12 +213,14 @@
       z-index: 1000;
     }
     .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+  position: relative; /* přidáno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* pokud máš overflow:hidden, vymaž to */
+    } 
     .logo {
       font-weight: bold;
       font-size: 1.2rem;
@@ -246,24 +248,25 @@
     }
   
     @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 1rem;
-        background-color: #ac1f1f;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-      .nav-menu.active {
-        display: flex;
-      }
-      .hamburger {
-        display: block;
-      }
-    }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background-color: #ac1f1f;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1100; /* přidáno, aby bylo menu nad vším */
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
   </style>
   
   <script>
@@ -445,6 +448,10 @@
     <h3><a href="malovani-na-oblicej-hasicske-akce.html">Malování na obličej a fotokoutek: Jak zpestřit akce na vesnicích</a></h3>
       <p>Proč je malování na obličej ideální pro hasitské,myslivecké a akce na vesnici?</p>
     </article>
+    <article>
+      <h3><a href="smyslohrani.html">Děti si hrají a nechávají se malovat na akci Ksychtíkovo smyslohraní</a></h3>
+        <p>To vše pod jednou "střechou"</p>
+      </article>
   </section>
 
   <section id="contact">
