@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Často kladené otázky | Ksychtíkovo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h2 {
+      text-align: center;
+    }
+    .faq-item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: white;
+    }
+    .faq-question {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    .active .arrow {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Často kladené otázky</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Máte stan? Jak dlouho vám to trvá nachystat?
+      <span class="arrow">▼</span>
+    </button>
+    <div class="faq-answer">
+      <p>Ano, máme vlastní stan 3×3 m. Pokud je akce venku, jsme na místě 30 minut před začátkem.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Můžete mi vystavit doklad?<span class="arrow">▼</span></button>
+    <div class="faq-answer">
+      <p>Ano, vystavujeme doklad o zaplacení.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Jak dlouho trvá namalovat obrázek?<span class="arrow">▼</span></button>
+    <div class="faq-answer">
+      <p>5–10 minut podle složitosti a trpělivosti malého modela 😊.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Kolik berete za hodinu? Účtujete dopravu?<span class="arrow">▼</span></button>
+    <div class="faq-answer">
+      <p>800 Kč/hodina (do 30 km zdarma, dále dle domluvy).</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Jak dlouho drží barva?<span class="arrow">▼</span></button>
+    <div class="faq-answer">
+      <p>Snadno smyvatelná hned po akci. Pokud se nenechá, může vydržet až 2 dny.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const questions = document.querySelectorAll(".faq-question");
+      questions.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const answer = btn.nextElementSibling;
+          btn.classList.toggle("active");
+          answer.style.display = answer.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
