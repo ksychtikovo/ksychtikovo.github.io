@@ -148,6 +148,27 @@
         height: 250px;
       }
     }
+
+       /* Kontejner pro články */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styl pro jednotlivé články */
+.article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -442,6 +463,9 @@
   </section>
 
   <section id="articles">
+
+
+ 
     <h2>Články a tipy</h2>
     <article>
       <h3><a href="detska_oslava.html">Jak připravit dětskou oslavu s malováním na obličej</a></h3>
@@ -680,7 +704,7 @@
 <section id="otazky">
   <h2>Nejčastější dotazy</h2>
   <p>Zde najdete odpovědi na často kladené otázky...</p>
-  <a href="otazky">FAQ</a>
+  <a href="#otazky">FAQ</a>
 </section>
 
       
