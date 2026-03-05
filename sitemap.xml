@@ -4,64 +4,66 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://ksychtikovo.cz/</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/detska_oslava.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/firemni_akce.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/motivy.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ksychtikovo.cz/halloween.html</loc>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/hair_extension.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/paleni_carodejnic.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ksychtikovo.cz/Oslavme_planetu.html</loc>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/malovani-na-oblicej-hasicske-akce.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/smyslohrani.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://ksychtikovo.cz/rezervace.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ksychtikovo.cz/otazky</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
+  <loc>https://ksychtikovo.cz/kurzy.html</loc>
+  <lastmod>2026-03-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://ksychtikovo.cz/index.html</loc>
-  <lastmod>2025-06-01T20:25:26+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
 
 </urlset>
