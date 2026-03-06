@@ -3,18 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ksychtíkovo | Malování na obličej Vsetín, Valmez, Rožnov a Nový Jičín</title>
-    <meta name="description" content="Profesionální malování na obličej, pletení copů a kreativní dílničky pro děti i dospělé. Působíme ve Vsetíně, Valašském Meziříčí, Rožnově a Novém Jičíně.">
+    <title>Ksychtíkovo | Malování na obličej Vsetín & Valmez</title>
     
-    <meta property="og:title" content="Ksychtíkovo – Den plný barev a kreativity">
-    <meta property="og:description" content="Zažijte s námi nezapomenutelnou akci: malování na obličej, pletení copů s kanekalonem a další.">
-    <meta property="og:image" content="https://www.ksychtikovo.cz/hero.png">
-    <meta property="og:url" content="https://www.ksychtikovo.cz/">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap');
-
         :root {
             --primary: #ff6666;
             --secondary: #ff9999;
@@ -31,7 +25,6 @@
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            text-align: center;
         }
 
         /* Navigace */
@@ -41,7 +34,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .nav-container {
             display: flex;
@@ -51,282 +43,71 @@
             margin: 0 auto;
         }
         .logo {
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-decoration: none;
-            color: white;
             font-family: 'Luckiest Guy', cursive;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
         }
         .nav-menu {
             list-style: none;
             display: flex;
-            gap: 1.2rem;
+            gap: 15px;
             margin: 0;
             padding: 0;
-            align-items: center;
         }
-        .nav-menu li a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
+            font-weight: 600;
         }
-        .nav-menu li a.fb-link {
+        .fb-nav {
             background: white;
-            color: var(--fb-blue);
-            padding: 5px 15px;
+            color: var(--fb-blue) !important;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
 
-        .hamburger {
-            display: none;
-            font-size: 1.8rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Header */
-        header {
-            background-color: var(--secondary);
-            padding: 100px 20px 60px;
-            color: white;
-        }
-        h1 {
-            margin: 0;
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            font-family: 'Luckiest Guy', cursive;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Kontejner */
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
-            border-radius: 15px;
-            text-align: left;
-        }
-
-        section {
-            padding: 40px 0;
-            border-bottom: 1px solid #eee;
-            scroll-margin-top: 100px;
-        }
-
-        h2 {
-            font-family: 'Luckiest Guy', cursive;
-            color: var(--primary);
-            font-size: 2.2rem;
+        /* Sekce */
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        header { 
+            background: var(--secondary); 
+            color: white; 
+            padding: 60px 20px; 
             text-align: center;
         }
+        h1 { font-family: 'Luckiest Guy', cursive; font-size: 3.5rem; margin: 0; }
+        h2 { font-family: 'Luckiest Guy', cursive; color: var(--primary); text-align: center; font-size: 2.2rem; }
 
         /* Články Grid */
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 30px;
         }
         .article-card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 15px;
+            background: white;
             padding: 20px;
-            transition: all 0.3s ease;
+            border-radius: 15px;
             text-decoration: none;
             color: inherit;
+            border: 1px solid #eee;
+            transition: 0.3s;
         }
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-color: var(--primary);
-        }
-        .article-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; }
-
-        /* Galerie Swiper */
-        .swiper-container { width: 100%; padding: 20px 0; }
-        .swiper-slide img { width: 100%; border-radius: 15px; }
-
-        /* Recenze */
-        .recenze-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .recenze-box {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid var(--primary);
-            font-style: italic;
-        }
+        .article-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .article-card h3 { color: var(--primary); margin-top: 0; }
 
         /* Tlačítka */
         .button {
             display: inline-block;
-            padding: 15px 35px;
-            background-color: var(--primary);
+            padding: 15px 30px;
+            background: var(--primary);
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
             border-radius: 50px;
             font-family: 'Luckiest Guy', cursive;
-            transition: 0.3s;
+            margin: 10px 0;
         }
-        .button:hover { background-color: var(--accent); transform: scale(1.05); }
+        .button-fb { background: var(--fb-blue); }
 
-        .button-fb {
-            background-color: var(--fb-blue);
-            margin-top: 10px;
-        }
-
-        .embed-container { margin-top: 20px; border-radius: 15px; overflow: hidden; border: 1px solid #ddd; }
-
-        footer {
-            background: var(--accent);
-            color: white;
-            padding: 40px 20px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background-color: var(--accent);
-                padding: 1.5rem;
-                width: 200px;
-            }
-            .nav-menu.active { display: flex; }
-            .hamburger { display: block; }
-        }
-    </style>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#top" class="logo">Ksychtíkovo 🎨</a>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="#about">O nás</a></li>
-            <li><a href="#gallery">Galerie</a></li>
-            <li><a href="kurzy.html">Kurzy</a></li>
-            <li><a href="#pricing">Ceník</a></li>
-            <li><a href="#articles">Články</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="fb-link">Facebook</a></li>
-        </ul>
-    </div>
-</nav>
-
-<header id="top">
-    <h1>Ksychtíkovo</h1>
-    <p>Profesionální facepainting – Vsetín, Valmez a okolí!</p>
-</header>
-
-<div class="container">
-
-    <section id="about">
-        <h2>O nás</h2>
-        <div style="text-align: center; margin-bottom: 25px;">
-            <img src="hero-800.webp" alt="Malování na obličej" style="width: 100%; max-width: 800px; border-radius: 10px;">
-        </div>
-        <p>
-            Vítejte na <strong>Ksychtíkovo.cz</strong>! Působíme v regionech <strong>Vsetín, Valašské Meziříčí, Rožnov pod Radhoštěm a Nový Jičín</strong>. 
-            Sledujte naše nejnovější výtvory na <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank">naší Facebookové stránce</a>.
-        </p>
-    </section>
-
-    <section id="gallery">
-        <h2>Galerie</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="tygrik.png" alt="Tygřík"></div>
-                <div class="swiper-slide"><img src="ufo.jpg" alt="UFO"></div>
-                <div class="swiper-slide"><img src="motyl.jpg" alt="Motýl"></div>
-                <div class="swiper-slide"><img src="housenka.jpg" alt="Housenka"></div>
-                <div class="swiper-slide"><img src="motyl_duha.jpg" alt="Motýl duha"></div>
-                <div class="swiper-slide"><img src="ruzova_pavucina.jpg" alt="Pavučina"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <section id="pricing">
-        <h2>Ceník</h2>
-        <div style="background: white; border: 2px dashed var(--primary); padding: 30px; border-radius: 15px; text-align: center;">
-            <p style="font-size: 1.5rem; margin: 0;">💰 1 hodina: <strong>1000 Kč</strong></p>
-        </div>
-    </section>
-
-    <section id="articles">
-        <h2>Články a tipy</h2>
-        <div class="articles-grid">
-            <a href="bezpecnost.html" class="article-card"><h3>✨ Bezpečí</h3><p>Proč používáme jen top barvy.</p></a>
-            <a href="detska_oslava.html" class="article-card"><h3>🎂 Oslava</h3><p>Tipy na nezapomenutelnou párty.</p></a>
-            <a href="firemni_akce.html" class="article-card"><h3>🏢 Firmy</h3><p>Zpestření pro vaše akce.</p></a>
-            <a href="motivy.html" class="article-card"><h3>🎨 Motivy</h3><p>Co dnes nejvíce letí.</p></a>
-            <a href="halloween.html" class="article-card"><h3>🎃 Halloween</h3><p>Strašidelné malování.</p></a>
-            <a href="hair_extension.html" class="article-card"><h3>💇‍♀️ Copy</h3><p>Dutch hair extensions.</p></a>
-            <a href="paleni_carodejnic.html" class="article-card"><h3>🔥 Čarodějnice</h3><p>Tradiční jarní akce.</p></a>
-            <a href="Oslavme_planetu.html" class="article-card"><h3>🌍 Den Země</h3><p>Přírodní motivy.</p></a>
-            <a href="malovani-na-oblicej-hasicske-akce.html" class="article-card"><h3>👨‍🚒 Slavnosti</h3><p>Akce na vesnicích.</p></a>
-            <a href="smyslohrani.html" class="article-card"><h3>👐 Smyslohraní</h3><p>Kreativní hraní.</p></a>
-        </div>
-    </section>
-
-    <section id="reviews">
-        <h2>💬 Recenze</h2>
-        <div class="recenze-container">
-            <div class="recenze-box"><p>„Děti byly nadšené! Skvělá atmosféra.“</p><strong>– Maminka Eva</strong></div>
-            <div class="recenze-box"><p>„Super tým a pohoda, doporučuji.“</p><strong>– Jana, organizátorka</strong></div>
-            <div class="recenze-box"><p>„Malování mělo obrovský úspěch.“</p><strong>– Pavel, Valmez</strong></div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-            <img src="ja.png" alt="Michaela Podmolová" style="width: 180px; border-radius: 20px;">
-            <div style="text-align: left;">
-                <p><strong>Michaela Podmolová</strong></p>
-                <p>📞 <strong>+420 728 500 091</strong></p>
-                <p>📧 <strong>podmolovam@gmail.com</strong></p>
-                <a href="rezervace.html" class="button">📅 Rezervovat</a><br>
-                <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="button button-fb">Sledujte nás na Facebooku</a>
-            </div>
-        </div>
-
-        <div class="embed-container" style="height: 400px; margin-top: 40px;">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FPrague&showPrint=0&src=cG9kbW9sb3ZhbUBnbWFpbC5jb20&color=%237986CB" style="border:0; width: 100%; height: 100%;" frameborder="0"></iframe>
-        </div>
-    </section>
-
-</div>
-
-<footer>
-    <p>© 2026 Ksychtíkovo | Valašské Meziříčí & Vsetín</p>
-    <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" style="color: white;">Navštivte nás na Facebooku</a>
-</footer>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    function toggleMenu() { document.getElementById("nav-menu").classList.toggle("active"); }
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 3000 },
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        breakpoints: { 640: { slidesPerView: 2 }, 1000
+        /* Recenze */
+        .reviews { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px;
