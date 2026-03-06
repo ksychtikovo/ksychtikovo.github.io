@@ -27,6 +27,7 @@
             --accent: #ac1f1f;
             --bg: #fcfbfb;
             --text: #333;
+            --fb-blue: #1877F2;
         }
 
         body {
@@ -75,6 +76,13 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 500;
+        }
+        .nav-menu li a.fb-link {
+            background: white;
+            color: var(--fb-blue);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
         }
 
         .hamburger {
@@ -203,6 +211,12 @@
         }
         .button:hover { background-color: var(--accent); transform: scale(1.05); }
 
+        .button-fb {
+            background-color: var(--fb-blue);
+            margin-top: 10px;
+        }
+        .button-fb:hover { background-color: #0d59b3; }
+
         .embed-container { margin-top: 20px; border-radius: 15px; overflow: hidden; border: 1px solid #ddd; }
 
         footer {
@@ -226,6 +240,7 @@
             }
             .nav-menu.active { display: flex; }
             .hamburger { display: block; }
+            .nav-menu li a.fb-link { background: transparent; color: white; padding: 0; }
         }
     </style>
 
@@ -244,6 +259,7 @@
             <li><a href="#pricing">Ceník</a></li>
             <li><a href="#articles">Články</a></li>
             <li><a href="#contact">Kontakt</a></li>
+            <li><a href="https://www.facebook.com/Ksychtikovo" target="_blank" class="fb-link">Facebook f</a></li>
         </ul>
     </div>
 </nav>
@@ -264,7 +280,7 @@
         <p>
             Vítejte na <strong>Ksychtíkovo.cz</strong> – specialisté na malování na obličej a zábavné programy! 
             Působíme především v regionech <strong>Vsetín, Valašské Meziříčí, Rožnov pod Radhoštěm a Nový Jičín</strong>. 
-            Každý obličej je pro nás jedinečným plátnem, které rozjasní každou vaši akci.
+            Sledujte nás i na <a href="https://www.facebook.com/Ksychtikovo" target="_blank">našem Facebooku</a>, kde sdílíme fotky z aktuálních akcí!
         </p>
         
         <div style="background: #fff5f5; padding: 20px; border-radius: 10px; margin-top: 20px;">
@@ -286,14 +302,14 @@
         </p>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="tygrik.webp" alt="Tygřík"></div>
-                <div class="swiper-slide"><img src="ufo.webp" alt="UFO"></div>
-                <div class="swiper-slide"><img src="motyl.webp" alt="Motýl"></div>
-                <div class="swiper-slide"><img src="housenka.webp" alt="Housenka"></div>
-                <div class="swiper-slide"><img src="motyl_duha.webp" alt="Duhový motýl"></div>
-                <div class="swiper-slide"><img src="ruzova_pavucina.webp" alt="Růžová pavučina"></div>
-                <div class="swiper-slide"><img src="zajic.webp" alt="Zajíček"></div>
-                <div class="swiper-slide"><img src="zelva.webp" alt="Želva"></div>
+                <div class="swiper-slide"><img src="tygrik.png" alt="Tygřík"></div>
+                <div class="swiper-slide"><img src="ufo.jpg" alt="UFO"></div>
+                <div class="swiper-slide"><img src="motyl.jpg" alt="Motýl"></div>
+                <div class="swiper-slide"><img src="housenka.jpg" alt="Housenka"></div>
+                <div class="swiper-slide"><img src="motyl_duha.jpg" alt="Duhový motýl"></div>
+                <div class="swiper-slide"><img src="ruzova_pavucina.jpg" alt="Růžová pavučina"></div>
+                <div class="swiper-slide"><img src="zajic.jpg" alt="Zajíček"></div>
+                <div class="swiper-slide"><img src="zelva.jpg" alt="Želva"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -394,7 +410,8 @@
                 <p><strong>Michaela Podmolová</strong></p>
                 <p>📞 Telefon: <strong>+420 728 500 091</strong></p>
                 <p>📧 Email: <strong><a href="mailto:podmolovam@gmail.com">podmolovam@gmail.com</a></strong></p>
-                <a href="rezervace.html" class="button">📅 Rezervovat termín</a>
+                <a href="rezervace.html" class="button">📅 Rezervovat termín</a><br>
+                <a href="https://www.facebook.com/Ksychtikovo" target="_blank" class="button button-fb">Sledujte nás na Facebooku</a>
             </div>
         </div>
 
@@ -413,8 +430,11 @@
 </div>
 
 <footer>
-    <p>© 2026 Ksychtíkovo - Malování na obličej | Vsetín, Valmez, Rožnov, Nový Jičín, Hranice</p>
-    <a href="#top" style="color: white; text-decoration: underline;">Zpět nahoru ⬆️</a>
+    <p>© 2026 Ksychtíkovo - Malování na obličej | Vsetín, Valmez, Rožnov, Nový Jičín</p>
+    <div style="margin-top: 10px;">
+        <a href="https://www.facebook.com/Ksychtikovo" target="_blank" style="color: white; margin-right: 15px;">Facebook</a>
+        <a href="#top" style="color: white; text-decoration: underline;">Zpět nahoru ⬆️</a>
+    </div>
 </footer>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -432,7 +452,6 @@
         breakpoints: { 640: { slidesPerView: 2 }, 1000: { slidesPerView: 3 } }
     });
 
-    // FAQ Akordeon
     document.querySelectorAll('.faq-question').forEach(item => {
         item.addEventListener('click', () => {
             const next = item.nextElementSibling;
