@@ -6,17 +6,11 @@
 
     <title>Ksychtíkovo | Malování na obličej Vsetín, Valmez, Rožnov a Nový Jičín</title>
     <meta name="description" content="Profesionální malování na obličej, pletení copů a kreativní dílničky pro děti i dospělé. Působíme ve Vsetíně, Valašském Meziříčí, Rožnově a Novém Jičíně.">
-    <meta name="keywords" content="malování na obličej, face painting, pletení copů, kanekalon, tvorba náramků, minerální kameny, dětské oslavy, firemní akce, festival, kreativní akce, Ksychtíkovo, Valašské Meziříčí">
-    <meta name="author" content="Michaela Podmolová - Ksychtíkovo">
-
+    
     <meta property="og:title" content="Ksychtíkovo – Den plný barev a kreativity">
-    <meta property="og:description" content="Zažijte s námi nezapomenutelnou akci: malování na obličej, pletení copů s kanekalonem a tvorbu náramků z minerálních kamenů.">
+    <meta property="og:description" content="Zažijte s námi nezapomenutelnou akci: malování na obličej, pletení copů s kanekalonem a další.">
     <meta property="og:image" content="https://www.ksychtikovo.cz/hero.png">
     <meta property="og:url" content="https://www.ksychtikovo.cz/">
-    <meta property="og:type" content="website">
-
-    <link rel="canonical" href="https://www.ksychtikovo.cz/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap');
@@ -55,7 +49,6 @@
             align-items: center;
             max-width: 1100px;
             margin: 0 auto;
-            position: relative;
         }
         .logo {
             font-weight: bold;
@@ -70,6 +63,7 @@
             gap: 1.2rem;
             margin: 0;
             padding: 0;
+            align-items: center;
         }
         .nav-menu li a {
             color: white;
@@ -80,9 +74,12 @@
         .nav-menu li a.fb-link {
             background: white;
             color: var(--fb-blue);
-            padding: 5px 12px;
+            padding: 5px 15px;
             border-radius: 20px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .hamburger {
@@ -103,12 +100,6 @@
             font-size: clamp(2.5rem, 8vw, 4rem);
             font-family: 'Luckiest Guy', cursive;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-            animation: pulse 3s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
         }
 
         /* Kontejner */
@@ -150,9 +141,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         .article-card:hover {
             transform: translateY(-5px);
@@ -160,11 +148,10 @@
             border-color: var(--primary);
         }
         .article-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; }
-        .article-card p { font-size: 0.9rem; color: #555; }
 
-        /* Galerie */
+        /* Galerie Swiper */
         .swiper-container { width: 100%; padding: 20px 0; }
-        .swiper-slide img { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .swiper-slide img { width: 100%; border-radius: 15px; }
 
         /* Recenze */
         .recenze-container {
@@ -181,22 +168,7 @@
             font-style: italic;
         }
 
-        /* FAQ */
-        .faq-item { margin-bottom: 15px; text-align: left; }
-        .faq-question {
-            background: #fff;
-            border: 1px solid #ddd;
-            width: 100%;
-            text-align: left;
-            padding: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* Kontakt a Tlačítka */
+        /* Tlačítka */
         .button {
             display: inline-block;
             padding: 15px 35px;
@@ -207,7 +179,6 @@
             border-radius: 50px;
             font-family: 'Luckiest Guy', cursive;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 102, 102, 0.3);
         }
         .button:hover { background-color: var(--accent); transform: scale(1.05); }
 
@@ -215,7 +186,6 @@
             background-color: var(--fb-blue);
             margin-top: 10px;
         }
-        .button-fb:hover { background-color: #0d59b3; }
 
         .embed-container { margin-top: 20px; border-radius: 15px; overflow: hidden; border: 1px solid #ddd; }
 
@@ -235,12 +205,10 @@
                 right: 0;
                 background-color: var(--accent);
                 padding: 1.5rem;
-                border-radius: 0 0 0 15px;
                 width: 200px;
             }
             .nav-menu.active { display: flex; }
             .hamburger { display: block; }
-            .nav-menu li a.fb-link { background: transparent; color: white; padding: 0; }
         }
     </style>
 
@@ -259,14 +227,14 @@
             <li><a href="#pricing">Ceník</a></li>
             <li><a href="#articles">Články</a></li>
             <li><a href="#contact">Kontakt</a></li>
-            <li><a href="https://www.facebook.com/Ksychtikovo" target="_blank" class="fb-link">Facebook f</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="fb-link">Facebook</a></li>
         </ul>
     </div>
 </nav>
 
 <header id="top">
-    <h1>Ksychtíkovo - Malování na obličej</h1>
-    <p>Profesionální facepainting pro děti i dospělé – Vsetín, Valmez a okolí!</p>
+    <h1>Ksychtíkovo</h1>
+    <p>Profesionální facepainting – Vsetín, Valmez a okolí!</p>
 </header>
 
 <div class="container">
@@ -274,42 +242,24 @@
     <section id="about">
         <h2>O nás</h2>
         <div style="text-align: center; margin-bottom: 25px;">
-            <img src="hero-800.webp" srcset="hero-400.webp 400w, hero-800.webp 800w" sizes="(max-width: 600px) 100vw, 800px" alt="Malování na obličej Ksychtíkovo" style="width: 100%; max-width: 800px; border-radius: 10px;">
+            <img src="hero-800.webp" alt="Malování na obličej" style="width: 100%; max-width: 800px; border-radius: 10px;">
         </div>
-        <h3>Míša a tým Ksychtíkovo 🎨✨</h3>
         <p>
-            Vítejte na <strong>Ksychtíkovo.cz</strong> – specialisté na malování na obličej a zábavné programy! 
-            Působíme především v regionech <strong>Vsetín, Valašské Meziříčí, Rožnov pod Radhoštěm a Nový Jičín</strong>. 
-            Sledujte nás i na <a href="https://www.facebook.com/Ksychtikovo" target="_blank">našem Facebooku</a>, kde sdílíme fotky z aktuálních akcí!
+            Vítejte na <strong>Ksychtíkovo.cz</strong>! Působíme v regionech <strong>Vsetín, Valašské Meziříčí, Rožnov pod Radhoštěm a Nový Jičín</strong>. 
+            Sledujte naše nejnovější výtvory na <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank">naší Facebookové stránce</a>.
         </p>
-        
-        <div style="background: #fff5f5; padding: 20px; border-radius: 10px; margin-top: 20px;">
-            <h4>Co všechno pro vás umíme?</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li>✔ <strong>Malování na obličej</strong> – od zvířátek po superhrdiny.</li>
-                <li>✔ <strong>Pletení boxerských copů</strong> – moderní účesy s kanekalonem.</li>
-                <li>✔ <strong>Balónková show</strong> – tvarování veselých zvířátek.</li>
-                <li>✔ <strong>Kurzy a školení</strong> – facepainting, copy, náramky z minerálů.</li>
-                <li>✔ <strong>Tvořivé dílničky</strong> – kreativní workshopy pro děti i dospělé.</li>
-            </ul>
-        </div>
     </section>
 
     <section id="gallery">
-        <h2>Galerie motivů</h2>
-        <p style="text-align:center; font-style: italic; font-size: 0.9rem;">
-            Nabízím motivy z pohádek, přírody i vesmíru. Používáme výhradně zdravotně nezávadné barvy.
-        </p>
+        <h2>Galerie</h2>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="tygrik.png" alt="Tygřík"></div>
                 <div class="swiper-slide"><img src="ufo.jpg" alt="UFO"></div>
                 <div class="swiper-slide"><img src="motyl.jpg" alt="Motýl"></div>
                 <div class="swiper-slide"><img src="housenka.jpg" alt="Housenka"></div>
-                <div class="swiper-slide"><img src="motyl_duha.jpg" alt="Duhový motýl"></div>
-                <div class="swiper-slide"><img src="ruzova_pavucina.jpg" alt="Růžová pavučina"></div>
-                <div class="swiper-slide"><img src="zajic.jpg" alt="Zajíček"></div>
-                <div class="swiper-slide"><img src="zelva.jpg" alt="Želva"></div>
+                <div class="swiper-slide"><img src="motyl_duha.jpg" alt="Motýl duha"></div>
+                <div class="swiper-slide"><img src="ruzova_pavucina.jpg" alt="Pavučina"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -320,145 +270,63 @@
         <h2>Ceník</h2>
         <div style="background: white; border: 2px dashed var(--primary); padding: 30px; border-radius: 15px; text-align: center;">
             <p style="font-size: 1.5rem; margin: 0;">💰 1 hodina: <strong>1000 Kč</strong></p>
-            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
-            <p>🗨️ <strong>Organizujete akci bez rozpočtu?</strong> Nevadí – mohu přijet i bez nároku na honorář, rodiče si malování pro své děti hradí přímo na místě.</p>
         </div>
     </section>
 
     <section id="articles">
         <h2>Články a tipy</h2>
         <div class="articles-grid">
-            <a href="bezpecnost.html" class="article-card">
-                <h3>✨ Bezpečí na prvním místě</h3>
-                <p>Jak dbáme na hygienu a proč používáme certifikované barvy.</p>
-            </a>
-            <a href="detska_oslava.html" class="article-card">
-                <h3>🎂 Dětská oslava s malováním</h3>
-                <p>Jak děti zabavit a vytvořit nezapomenutelný zážitek.</p>
-            </a>
-            <a href="firemni_akce.html" class="article-card">
-                <h3>🏢 Facepainting pro firmy</h3>
-                <p>Proč je malování skvělý doplněk firemních večírků a dnů.</p>
-            </a>
-            <a href="motivy.html" class="article-card">
-                <h3>🎨 Populární motivy</h3>
-                <p>Od Spidermana po jednorožce – co dnes u dětí nejvíc letí.</p>
-            </a>
-            <a href="halloween.html" class="article-card">
-                <h3>🎃 Halloween a facepainting</h3>
-                <p>Strašidelně skvělá kombinace pro váš večírek.</p>
-            </a>
-            <a href="hair_extension.html" class="article-card">
-                <h3>💇‍♀️ Čarování s vlasy</h3>
-                <p>Představujeme Dutch hair extensions a barevné copánky.</p>
-            </a>
-            <a href="paleni_carodejnic.html" class="article-card">
-                <h3>🔥 Pálení čarodějnic</h3>
-                <p>Kouzelné motivy pro tradiční jarní slavnosti.</p>
-            </a>
-            <a href="Oslavme_planetu.html" class="article-card">
-                <h3>🌍 Oslavme planetu barvami</h3>
-                <p>Den Země jako svátek barev a přírody.</p>
-            </a>
-            <a href="malovani-na-oblicej-hasicske-akce.html" class="article-card">
-                <h3>👨‍🚒 Akce na vesnicích</h3>
-                <p>Jak zpestřit hasičské a myslivecké slavnosti.</p>
-            </a>
-            <a href="smyslohrani.html" class="article-card">
-                <h3>👐 Ksychtíkovo smyslohraní</h3>
-                <p>Když si děti hrají a nechávají se malovat pod jednou střechou.</p>
-            </a>
+            <a href="bezpecnost.html" class="article-card"><h3>✨ Bezpečí</h3><p>Proč používáme jen top barvy.</p></a>
+            <a href="detska_oslava.html" class="article-card"><h3>🎂 Oslava</h3><p>Tipy na nezapomenutelnou párty.</p></a>
+            <a href="firemni_akce.html" class="article-card"><h3>🏢 Firmy</h3><p>Zpestření pro vaše akce.</p></a>
+            <a href="motivy.html" class="article-card"><h3>🎨 Motivy</h3><p>Co dnes nejvíce letí.</p></a>
+            <a href="halloween.html" class="article-card"><h3>🎃 Halloween</h3><p>Strašidelné malování.</p></a>
+            <a href="hair_extension.html" class="article-card"><h3>💇‍♀️ Copy</h3><p>Dutch hair extensions.</p></a>
+            <a href="paleni_carodejnic.html" class="article-card"><h3>🔥 Čarodějnice</h3><p>Tradiční jarní akce.</p></a>
+            <a href="Oslavme_planetu.html" class="article-card"><h3>🌍 Den Země</h3><p>Přírodní motivy.</p></a>
+            <a href="malovani-na-oblicej-hasicske-akce.html" class="article-card"><h3>👨‍🚒 Slavnosti</h3><p>Akce na vesnicích.</p></a>
+            <a href="smyslohrani.html" class="article-card"><h3>👐 Smyslohraní</h3><p>Kreativní hraní.</p></a>
         </div>
     </section>
 
     <section id="reviews">
-        <h2>💬 Co o nás říkají naši zákazníci</h2>
+        <h2>💬 Recenze</h2>
         <div class="recenze-container">
-            <div class="recenze-box">
-                <p>„Děti byly nadšené z malování na obličej, hlavně Batman a motýlci měly úspěch. Moc děkujeme za skvělou atmosféru.“</p>
-                <strong>– Maminka Eva ⭐⭐⭐⭐⭐</strong>
-            </div>
-            <div class="recenze-box">
-                <p>„Ksychtíkovo nám malovalo na dětském dni a děti byly ochotné i postavit stan – super tým a pohoda.“</p>
-                <strong>– Organizátorka Jana ⭐⭐⭐⭐⭐</strong>
-            </div>
-            <div class="recenze-box">
-                <p>„Havajský fotokoutek byl perfektní doplněk a malování mělo úspěch nejen u dětí, ale i u dospělých.“</p>
-                <strong>– Pavel, Valašské Meziříčí ⭐⭐⭐⭐⭐</strong>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="https://g.co/kgs/9AiN5gZ" target="_blank" class="button" style="font-size: 1rem;">Další recenze na Google →</a>
-        </div>
-    </section>
-
-    <section id="otazky">
-        <h2>Nejčastější dotazy</h2>
-        <div class="faq-item">
-            <div class="faq-question">Jak probíhá malování a je bezpečné? <span>▼</span></div>
-            <div style="padding: 15px; display: none; background: #fefefe;">
-                Používáme výhradně profesionální antialergenní barvy s certifikací pro dětskou pokožku. Jedno malování trvá 5-8 minut a barvy jsou snadno smývatelné vodou a mýdlem.
-            </div>
+            <div class="recenze-box"><p>„Děti byly nadšené! Skvělá atmosféra.“</p><strong>– Maminka Eva</strong></div>
+            <div class="recenze-box"><p>„Super tým a pohoda, doporučuji.“</p><strong>– Jana, organizátorka</strong></div>
+            <div class="recenze-box"><p>„Malování mělo obrovský úspěch.“</p><strong>– Pavel, Valmez</strong></div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Kontakt</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-            <img src="ja.png" alt="Michaela Podmolová" style="width: 200px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <img src="ja.png" alt="Michaela Podmolová" style="width: 180px; border-radius: 20px;">
             <div style="text-align: left;">
                 <p><strong>Michaela Podmolová</strong></p>
-                <p>📞 Telefon: <strong>+420 728 500 091</strong></p>
-                <p>📧 Email: <strong><a href="mailto:podmolovam@gmail.com">podmolovam@gmail.com</a></strong></p>
-                <a href="rezervace.html" class="button">📅 Rezervovat termín</a><br>
-                <a href="https://www.facebook.com/Ksychtikovo" target="_blank" class="button button-fb">Sledujte nás na Facebooku</a>
+                <p>📞 <strong>+420 728 500 091</strong></p>
+                <p>📧 <strong>podmolovam@gmail.com</strong></p>
+                <a href="rezervace.html" class="button">📅 Rezervovat</a><br>
+                <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="button button-fb">Sledujte nás na Facebooku</a>
             </div>
         </div>
 
-        <div class="embed-container" style="height: 500px; margin-top: 40px;">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FPrague&showPrint=0&src=cG9kbW9sb3ZhbUBnbWFpbC5jb20&color=%237986CB" style="border:0; width: 100%; height: 100%;" frameborder="0" scrolling="no"></iframe>
-        </div>
-
-        <div style="margin-top: 30px; text-align: center;">
-            <p><strong>Najdete nás zde:</strong> Ksychtíkovo, Lešná 169, 756 41 | IČO: 23249943</p>
-            <div class="embed-container" style="height: 300px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.536340243464!2d17.9284241!3d49.4932457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713cf76e0c2db89%3A0xff6b947a9d80d2d3!2sLe%C5%A1n%C3%A1%20169%2C%20756%2041%20Le%C5%A1n%C3%A1!5e0!3m2!1scs!2scz!4v1700000000000!5m2!1scs!2scz" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        <div class="embed-container" style="height: 400px; margin-top: 40px;">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FPrague&showPrint=0&src=cG9kbW9sb3ZhbUBnbWFpbC5jb20&color=%237986CB" style="border:0; width: 100%; height: 100%;" frameborder="0"></iframe>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <p>© 2026 Ksychtíkovo - Malování na obličej | Vsetín, Valmez, Rožnov, Nový Jičín</p>
-    <div style="margin-top: 10px;">
-        <a href="https://www.facebook.com/Ksychtikovo" target="_blank" style="color: white; margin-right: 15px;">Facebook</a>
-        <a href="#top" style="color: white; text-decoration: underline;">Zpět nahoru ⬆️</a>
-    </div>
+    <p>© 2026 Ksychtíkovo | Valašské Meziříčí & Vsetín</p>
+    <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" style="color: white;">Navštivte nás na Facebooku</a>
 </footer>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    function toggleMenu() {
-        document.getElementById("nav-menu").classList.toggle("active");
-    }
-
+    function toggleMenu() { document.getElementById("nav-menu").classList.toggle("active"); }
     const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: { delay: 3000 },
+        slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 3000 },
         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-        breakpoints: { 640: { slidesPerView: 2 }, 1000: { slidesPerView: 3 } }
-    });
-
-    document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', () => {
-            const next = item.nextElementSibling;
-            next.style.display = next.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-</script>
-
-</body>
-</html>
+        breakpoints: { 640: { slidesPerView: 2 }, 1000
