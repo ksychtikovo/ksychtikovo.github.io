@@ -3,163 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Školení malování na obličej, pletení copů a tvorba náramků – Ksychtíkovo</title>
-    <meta name="description" content="Zúčastněte se kurzů malování na obličej, pletení copů s kanekalonem a tvorby náramků z minerálních kamenů.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
+    <title>Školení malování na obličej, pletení copů a tvorba náramků – Ksychtíkovo</title>
+    <meta name="description" content="Zúčastněte se kurzů malování na obličej, pletení copů s kanekalonem a tvorby náramků z minerálních kamenů. Ideální pro rodiče, animátory a kreativní duše.">
+    <meta name="keywords" content="malování na obličej, facepainting, pletení copů, kanekalon, tvorba náramků, minerální kameny, kurz, školení, kreativní kurzy, děti, animátoři, Ksychtíkovo, Morava">
+    <meta name="author" content="Ksychtíkovo">
+    <link rel="canonical" href="https://www.ksychtikovo.cz/kurzy.html">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Kurzy malování na obličej, pletení copů a tvorby náramků – Ksychtíkovo">
+    <meta property="og:description" content="Připojte se k našim kurzům a naučte se malování na obličej, pletení copů s kanekalonem a tvorbu náramků z minerálních kamenů.">
+    <meta property="og:image" content="https://www.ksychtikovo.cz/kurzy.webp">
+    <meta property="og:url" content="https://www.ksychtikovo.cz/kurzy.html">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary: #ff6666;
+            --secondary: #ff9999;
+            --accent: #ac1f1f;
+            --bg: #fcfbfb;
+            --text: #333;
+            --fb-blue: #1877F2;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            background-color: #fff9f0;
-            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigace ve stylu Indexu */
+        .navbar {
+            background-color: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-family: 'Luckiest Guy', cursive;
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
             margin: 0;
             padding: 0;
         }
-
-        header, footer {
-            background-color: #ffcc70;
-            color: #000;
-            padding: 2em 1em;
-            text-align: center;
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 1.5em;
+        /* Header */
+        header {
+            background-color: var(--secondary);
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Luckiest Guy', cursive;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin: 0;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Kontejner obsahu */
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px;
+            padding: 40px;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        h2, h3, h4 { color: #c75146; }
-        
-        .fb-section {
-            background: #f0f2f5;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
+        h2, h3, h4 {
+            font-family: 'Luckiest Guy', cursive;
+            color: var(--primary);
         }
 
-        .btn-back {
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 30px; }
+        h3 { color: var(--accent); margin-top: 40px; border-bottom: 2px solid #fff1f1; padding-bottom: 5px; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        /* Tlačítka */
+        .button-group { text-align: center; margin: 40px 0; }
+        .button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffad33;
-            color: black;
+            padding: 15px 35px;
+            background: var(--primary);
+            color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-family: 'Luckiest Guy', cursive;
+            transition: 0.3s;
+            border: none;
         }
+        .button:hover { transform: scale(1.05); background: var(--accent); }
+        .button-fb { background: var(--fb-blue); }
 
-        .insta-link {
+        /* Instagram Link */
+        .insta-box {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff5f5;
+            border-radius: 15px;
             text-decoration: none;
-            color: #E1306C;
-            font-weight: bold;
-            margin-top: 10px;
+            color: var(--text);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .insta-box:hover { background: #ffebeb; }
+        .insta-icon { width: 30px; height: 30px; }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
         }
 
-        img.insta-icon {
-            width: 32px;
-            height: 32px;
-            vertical-align: middle;
+        @media (max-width: 768px) {
+            .container { margin-top: 0; border-radius: 0; padding: 20px; }
+            .nav-menu { display: none; } /* Pro jednoduchost v podstránce */
         }
-
-        hr { border: 0; border-top: 1px solid #eee; margin: 30px 0; }
     </style>
 </head>
 <body>
 
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">Ksychtíkovo 🎨</a>
+        <ul class="nav-menu">
+            <li><a href="index.html">Zpět na hlavní web</a></li>
+        </ul>
+    </div>
+</nav>
+
 <header>
-    <h1>Kurzy a školení - Ksychtíkovo</h1>
-    <p>Naučte se čarovat s barvami, vlasy a kameny!</p>
+    <h1>Kurzy a školení</h1>
 </header>
 
-<main>
-    <a href="index.html" class="btn-back">← Zpět na hlavní stránku</a>
+<div class="container">
+    <article>
+        <h2>Staňte se mistry barev!</h2>
+        
+        <p>
+            Už jste někdy zatoužili proměnit sousedovic Pepíka v neohroženého tygra, svoji dceru v kouzelnou vílu nebo sebe v zombie po náročném pondělku? 
+            V <strong>Ksychtíkově</strong> jsme si řekli, že své štětce a barvičky nebudeme schovávat. 
+            Rozhodli jsme se pořádat kurzy, aby si každý mohl osvojit tohle kouzlo fantazie!
+        </p>
 
-    <section id="articles">
-        <article>
-            <h2>Vše o našich kurzech</h2>
-            <p>
-                Už jste někdy zatoužili proměnit sousedovic Pepíka v neohroženého tygra,
-                svoji dceru v kouzelnou vílu nebo sebe v... ehm... zombie po náročném pondělku?
-                V <strong>Ksychtíkově</strong> jsme se rozhodli <strong>pořádat kurzy</strong>,
-                aby si každý mohl osvojit tohle kouzlo barev a fantazie!
-            </p>
+        <div class="button-group">
+            <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="button button-fb">Aktuální termíny na Facebooku</a>
+        </div>
 
-            <div class="fb-section">
-                <strong>Aktuální termíny najdete vždy na našem </strong><br>
-                <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" style="color: #1877F2; font-weight: bold; font-size: 1.1em;">Facebooku Ksychtíkovo</a>
-            </div>
+        <h3>Pro koho jsou kurzy určené?</h3>
+        <ul>
+            <li><strong>Pro rodiče:</strong> Kteří chtějí rozzářit oči svých dětí na každé oslavě.</li>
+            <li><strong>Pro animátory a učitele:</strong> Kteří chtějí přinést profi zábavu na tábory a akce.</li>
+            <li><strong>Pro kreativní duše:</strong> Které chtějí vyzkoušet nový „živý“ plátno – lidský obličej!</li>
+        </ul>
 
-            <h4>Pro koho jsou kurzy určené?</h4>
-            <ul>
-                <li>Pro rodiče, kteří chtějí rozzářit oči svých dětí.</li>
-                <li>Pro animátory, učitele a vedoucí kroužků.</li>
-                <li>Pro kreativní duše, které baví zkoušet nové věci.</li>
-            </ul>
+        <h3>🎨 Kurzy malování na obličej</h3>
+        <ul>
+            <li>Základy hygieny a práce s barvami (temperky fakt ne!).</li>
+            <li>Jaké štětce a houbičky používáme pro zázračné výsledky.</li>
+            <li>Snadné a efektní motivy: motýl, tygr, kočička, superhrdina.</li>
+            <li>Triky, jak malovat rychle, než děti utečou za skákacím hradem.</li>
+        </ul>
 
-            <h4>Co se na kurzu naučíte?</h4>
-            <h3>🎨 Malování na obličej</h3>
-            <ul>
-                <li>Základy hygieny a práce s profesionálními barvami.</li>
-                <li>Práce se štětci a houbičkami.</li>
-                <li>Snadné motivy: motýl, tygr, superhrdina.</li>
-                <li>Triky pro rychlé a efektní malování.</li>
-            </ul>
+        <h3>💇‍♀️ Kurzy pletení copů s kanekalonem</h3>
+        <p>Barevné prameny, které vydrží festival i běžný týden ve škole.</p>
+        <ul>
+            <li>Jak pracovat s kanekalonem, aby vypadal přirozeně.</li>
+            <li>Základní techniky pletení boxerských copů.</li>
+            <li>Tipy na údržbu účesu.</li>
+        </ul>
 
-            <h3>💇‍♀️ Pletení copů s kanekalonem</h3>
-            <ul>
-                <li>Jak pracovat s kanekalonem, aby vypadal přirozeně.</li>
-                <li>Základní techniky pletení a jejich variace.</li>
-                <li>Jak sladit barvy a vytvořit účes, který vydrží.</li>
-            </ul>
+        <h3>💎 Kurzy výroby náramků z minerálů</h3>
+        <p>
+            Tuto techniku jsem si přivezla až z dalekého <strong>Maui</strong>, kde jsem vedla své první kurzy. 
+            Ráda vás naučím kombinovat kameny podle jejich energie i vzhledu.
+        </p>
+        
+        <a href="https://www.instagram.com/craftandculture_?igsh=MTZhYmp1YnJseGJjZw==" target="_blank" class="insta-box">
+            <img src="https://www.ksychtikovo.cz/icons/instagram.svg" alt="Instagram" class="insta-icon">
+            Inspirace z mé tvorby na Instagramu
+        </a>
 
-            <h3>💎 Výroba náramků z minerálů</h3>
-            <p>
-                Práci s minerálními kameny jsem začala na ostrově Maui, kde jsem vedla své první kurzy. 
-                Ráda vám předám své zkušenosti s kombinováním barev i významy kamenů.
-            </p>
-            <ul>
-                <li>Techniky navlékání a správné ukončení náramků.</li>
-                <li>Péče o přírodní kameny.</li>
-                <li>Odnesete si vlastní originální výrobek.</li>
-            </ul>
+        <h3>Jak naše kurzy probíhají?</h3>
+        <p>
+            Každý kurz kombinuje teorii s hromadou praxe. Obsah můžeme přizpůsobit individuálně – od krátké ukázky po celodenní workshop. 
+            Na konci získáte <strong>osvědčení o absolvování kurzu</strong> a můžete si odnést i <strong>startovací balíček</strong> materiálů.
+        </p>
 
-            <a href="https://www.instagram.com/craftandculture_?igsh=MTZhYmp1YnJseGJjZw==" target="_blank" class="insta-link">
-                <img src="https://www.ksychtikovo.cz/icons/instagram.svg" alt="Instagram" class="insta-icon">
-                
-            </a>
-
-            <hr>
-
-            <h4>Jak kurzy probíhají?</h4>
-            <p>
-                Každý kurz trvá několik hodin a kombinuje teorii s praxí. Obsah můžeme přizpůsobit 
-                vašim přáním – od krátkých ukázek po intenzivní celodenní workshop.
-            </p>
-            <p>
-                Na konci získáte <strong>osvědčení o absolvování kurzu</strong> a můžete si 
-                zakoupit <strong>startovací balíček</strong> (barvy, kanekalon nebo kameny), 
-                abyste mohli tvořit hned i doma.
-            </p>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.facebook.com/profile.php?id=61556338510852" target="_blank" class="btn-back" style="background: #1877F2; color: white;">Mám zájem o kurz - Napište mi!</a>
-            </div>
-        </article>
-    </section>
-</main>
+        <div class="button-group">
+            <a href="index.html#contact" class="button">Mám zájem - rezervovat termín</a>
+        </div>
+    </article>
+</div>
 
 <footer>
-    <p>© 2026 Ksychtíkovo | Valašské Meziříčí & Lešná</p>
+    <p>© 2026 Ksychtíkovo | Valašské Meziříčí & okolí</p>
+    <p><a href="index.html" style="color: white;">Zpět na úvodní stránku</a></p>
 </footer>
 
 </body>
