@@ -213,11 +213,19 @@
             .nav-menu.active { display: flex; }
             .hamburger { display: block; }
         }
-    </style>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-
-    /* Styl pro sekci partnerů Ksychtikovo */
+        media (max-width: 768px) {
+    section {
+        padding: 20px 0 !important; /* Natvrdo zmenší mezery mezi sekcemi */
+    }
+    h2 {
+        margin-bottom: 20px !important;
+    }
+    .swiper-container {
+        padding: 10px 0 !important;
+    }
+}
+Styl pro sekci partnerů Ksychtikovo */
 .partneri-sekce {
     padding: 20px 20px;
     background-color: #f9f9f9; /* Jemné šedé pozadí pro oddělení sekce */
@@ -288,6 +296,13 @@
         width: 120px;
     }
 }
+
+        
+
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
 
 </head>
 <body>
