@@ -215,6 +215,80 @@
         }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    /* Styl pro sekci partnerů Ksychtikovo */
+.partneri-sekce {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Jemné šedé pozadí pro oddělení sekce */
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.partneri-sekce h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.partneri-uvod {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.loga-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Aby se na mobilu naskládaly pod sebe */
+    gap: 40px; /* Mezera mezi logy */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner-polozka {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Šířka jednoho loga */
+    transition: transform 0.3s ease;
+}
+
+.partner-polozka:hover {
+    transform: scale(1.05); /* Jemné zvětšení při najetí myší */
+}
+
+.partner-polozka img {
+    max-width: 100%;
+    height: 80px; /* Fixní výška zajistí optickou zarovnanost */
+    object-fit: contain; /* Logo se nedeformuje */
+    filter: grayscale(100%); /* Černobílá pro elegantní vzhled */
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-polozka:hover img {
+    filter: grayscale(0%); /* Při najetí se logo vybarví */
+    opacity: 1;
+}
+
+.partner-polozka span {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: bold;
+}
+
+/* Úprava pro mobilní telefony */
+@media (max-width: 600px) {
+    .loga-grid {
+        gap: 20px;
+    }
+    .partner-polozka {
+        width: 120px;
+    }
+}
+
 </head>
 <body>
 
@@ -351,6 +425,35 @@
             <p><strong>Akce pro obce a veřejnost:</strong> Možnost domluvy malování s přímou platbou od rodičů na místě.</p>
         </div>
     </section>
+
+    <section class="partneri-sekce">
+    <div class="container">
+        <h2>Naši partneři a kde malujeme</h2>
+        <p class="partneri-uvod">Je nám ctí spolupracovat s městy a organizacemi v našem regionu.</p>
+        
+        <div class="loga-grid">
+            <div class="partner-polozka">
+                <img src="cesta-k-logum/logo-valmez.png" alt="Město Valašské Meziříčí - malování na obličej Ksychtikovo, den dětí">
+                <span>Valašské Meziříčí</span>
+            </div>
+            
+            <div class="partner-polozka">
+                <img src="cesta-k-logum/logo-novy-jicin.png" alt="Město Nový Jičín - pletení copánků Ksychtikovo">
+                <span>Nový Jičín</span>
+            </div>
+            
+            <div class="partner-polozka">
+                <img src="cesta-k-logum/logo-vsetin.png" alt="Město Vsetin - facepainting a akce pro děti Valašské záření">
+                <span>Město Vsetín</span>
+            </div>
+
+            <div class="partner-polozka">
+                <img src="cesta-k-logum/logo-palicak.png" alt="Paličák Run Palacov - reference Ksychtikovo">
+                <span>Burger Day</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="articles">
         <h2>Články a rady pro vaši akci</h2>
