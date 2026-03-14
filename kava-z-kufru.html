@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Na Kafíčko... – Káva z kufru | Ksychtikovo</title>
-    <meta name="description" content="Stylová, moderní mobilní kavárna pro vaše akce v parku i na festivalech. Výběrová káva, úplná energetická nezávislost a čistý provoz. Rezervujte si nás!">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --dark-coffee: #3e2723;
             --coffee: #6f4e37;
             --latte: #c0a080;
-            --cream: #f5f5dc;
+            --cream: #f8f4ef;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--cream);
@@ -26,8 +27,26 @@
         header {
             background-color: var(--dark-coffee);
             color: var(--white);
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
+        }
+
+        /* GRAFICKY DOKONALÝ NADPIS - PSACÍ KURZÍVA */
+        h1 { 
+            font-family: 'Dancing Script', cursive;
+            color: var(--latte); 
+            font-size: 5.5rem; 
+            margin: 0;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -39,68 +58,91 @@
         .hero-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 3rem;
             align-items: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .hero-image {
-            flex: 1;
-            min-width: 300px;
-        }
-
+        .hero-image { flex: 1; min-width: 300px; }
         .hero-image img {
             width: 100%;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            display: block;
         }
 
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
+        .hero-text { flex: 1; min-width: 300px; }
+        
+        h2 { 
+            font-family: 'Playfair Display', serif;
+            color: var(--coffee); 
+            border-bottom: 2px solid var(--latte); 
+            padding-bottom: 0.5rem; 
         }
-
-        h1 { color: var(--latte); font-size: 2.5rem; margin-bottom: 1rem; font-style: italic; }
-        h2 { color: var(--coffee); border-bottom: 2px solid var(--latte); padding-bottom: 0.5rem; }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin: 3rem 0;
         }
 
         .feature-card {
             background: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 5px solid var(--coffee);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border-bottom: 4px solid var(--latte);
         }
 
+        .feature-card h3 { font-family: 'Playfair Display', serif; color: var(--coffee); }
+
         .cta-box {
-            background-color: var(--coffee);
+            background-color: var(--dark-coffee);
             color: var(--white);
-            padding: 3rem;
+            padding: 4rem 2rem;
             text-align: center;
-            border-radius: 15px;
-            margin-top: 3rem;
+            border-radius: 20px;
+            margin-top: 4rem;
         }
 
         .btn {
             display: inline-block;
             background-color: var(--latte);
             color: var(--dark-coffee);
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: bold;
-            margin-top: 1rem;
-            transition: transform 0.2s;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
 
-        .btn:hover { transform: scale(1.05); background-color: var(--white); }
+        .btn:hover { background-color: var(--white); transform: scale(1.05); }
 
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--coffee); }
+        .social-links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--latte);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover { color: var(--white); }
+
+        footer { padding: 3rem; font-size: 0.9rem; color: #888; text-align: center; }
     </style>
 </head>
 <body>
@@ -118,31 +160,35 @@
         <div class="hero-text">
             <h2>Káva, která tvoří atmosféru</h2>
             <p>Hledáte originální oživení pro váš park, kulturní akci nebo soukromou oslavu? <strong>Na Kafíčko...</strong> není jen obyčejný stánek. Je to stylový kávový bar na kolech, který přináší vůni čerstvě mleté výběrové kávy tam, kde ji lidé nejvíce potřebují.</p>
-            <p>Naše filozofie je jednoduchá: Špičková kvalita, úsměv a naprostý respekt k okolí.</p>
+            <p>Naše filozofie je jednoduchá: Špičková kvalita, úsměv a naprostý respekt k okolí. Stačí otevřít kufr a zážitek může začít.</p>
         </div>
     </section>
 
-    <h2>Proč si vybrat právě nás?</h2>
     <div class="features">
         <div class="feature-card">
-            <h3>Nezávislost na sítích</h3>
-            <p>Jsme 100% energeticky soběstační. Nepotřebujeme přípojky elektřiny ani vody. Můžeme stát uprostřed louky i v historickém centru.</p>
+            <h3>☕ Nezávislost</h3>
+            <p>Jsme 100% energeticky soběstační. Nepotřebujeme přípojky elektřiny ani vody. Můžeme stát kdekoli.</p>
         </div>
         <div class="feature-card">
-            <h3>Ekologický přístup</h3>
-            <p>Náš provoz je tichý a čistý. Žádné kabely, žádný hluk. Po našem odjezdu zůstane místo v naprostém pořádku.</p>
+            <h3>🌿 Ekologie</h3>
+            <p>Tichý provoz a absolutní čistota. Po našem odjezdu zůstane místo v naprostém pořádku.</p>
         </div>
         <div class="feature-card">
-            <h3>Kvalita bez kompromisů</h3>
-            <p>Pracujeme s profesionální technologií a výběrovou kávou. Každý šálek je připraven s láskou a precizností baristy.</p>
+            <h3>✨ Kvalita</h3>
+            <p>Výběrová káva připravovaná na profesionální technologii s maximální baristickou péčí.</p>
         </div>
     </div>
 
     <section class="cta-box">
         <h2>Rezervujte si svůj termín</h2>
-        <p>Máte zájem o naši účast na vaší akci nebo chcete oživit veřejný prostor ve vašem městě? Rádi se domluvíme na spolupráci.</p>
-        <p><strong>Aktuálně přijímáme rezervace pro letní sezónu!</strong></p>
-        <a href="mailto:vas-email@seznam.cz" class="btn">Napište nám a domluvíme se</a>
+        <p>Máte zájem o naši účast na vaší akci? Rádi se domluvíme.</p>
+        <a href="mailto:info@ksychtikovo.cz" class="btn">Napište nám</a>
+        
+        <div class="social-links">
+            <p style="margin-bottom: 1rem;">Sledujte nás:</p>
+            <a href="https://facebook.com/kavazkufru" target="_blank">Facebook</a>
+            <a href="https://instagram.com/kavazkufru" target="_blank">Instagram</a>
+        </div>
     </section>
 </div>
 
