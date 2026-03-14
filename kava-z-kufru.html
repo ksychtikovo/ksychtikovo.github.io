@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Kafíčko... – Káva z kufru | Ksychtikovo</title>
+    <meta name="description" content="Stylová, moderní mobilní kavárna pro vaše akce v parku i na festivalech. Výběrová káva, úplná energetická nezávislost a čistý provoz. Rezervujte si nás!">
+    <style>
+        :root {
+            --dark-coffee: #3e2723;
+            --coffee: #6f4e37;
+            --latte: #c0a080;
+            --cream: #f5f5dc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream);
+            color: var(--dark-coffee);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-coffee);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h1 { color: var(--latte); font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { color: var(--coffee); border-bottom: 2px solid var(--latte); padding-bottom: 0.5rem; }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--coffee);
+        }
+
+        .cta-box {
+            background-color: var(--coffee);
+            color: var(--white);
+            padding: 3rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--latte);
+            color: var(--dark-coffee);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); background-color: var(--white); }
+
+        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: var(--coffee); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Na Kafíčko...</h1>
+    <p>Mobilní kavárna, která přijede za Vámi</p>
+</header>
+
+<div class="container">
+    <section class="hero-section">
+        <div class="hero-image">
+            <img src="Na Kafíčko....jpg" alt="Mobilní kavárna Na Kafíčko v parku, káva z kufru">
+        </div>
+        <div class="hero-text">
+            <h2>Káva, která tvoří atmosféru</h2>
+            <p>Hledáte originální oživení pro váš park, kulturní akci nebo soukromou oslavu? <strong>Na Kafíčko...</strong> není jen obyčejný stánek. Je to stylový kávový bar na kolech, který přináší vůni čerstvě mleté výběrové kávy tam, kde ji lidé nejvíce potřebují.</p>
+            <p>Naše filozofie je jednoduchá: Špičková kvalita, úsměv a naprostý respekt k okolí.</p>
+        </div>
+    </section>
+
+    <h2>Proč si vybrat právě nás?</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Nezávislost na sítích</h3>
+            <p>Jsme 100% energeticky soběstační. Nepotřebujeme přípojky elektřiny ani vody. Můžeme stát uprostřed louky i v historickém centru.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Ekologický přístup</h3>
+            <p>Náš provoz je tichý a čistý. Žádné kabely, žádný hluk. Po našem odjezdu zůstane místo v naprostém pořádku.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Kvalita bez kompromisů</h3>
+            <p>Pracujeme s profesionální technologií a výběrovou kávou. Každý šálek je připraven s láskou a precizností baristy.</p>
+        </div>
+    </div>
+
+    <section class="cta-box">
+        <h2>Rezervujte si svůj termín</h2>
+        <p>Máte zájem o naši účast na vaší akci nebo chcete oživit veřejný prostor ve vašem městě? Rádi se domluvíme na spolupráci.</p>
+        <p><strong>Aktuálně přijímáme rezervace pro letní sezónu!</strong></p>
+        <a href="mailto:vas-email@seznam.cz" class="btn">Napište nám a domluvíme se</a>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 Ksychtikovo - Na Kafíčko... Všechna práva vyhrazena.
+</footer>
+
+</body>
+</html>
