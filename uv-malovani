@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Zářivé UV malování na obličej a tělo | Ksychtíkovo</title>
+
+    <!-- SEO & AI Search Optimization Meta Tags -->
+    <meta name="description" content="Zažijte kouzlo UV malování s Ksychtíkovo (Valašské Meziříčí)! Speciální EU schválené UV barvy pro dětské akce, firemní večírky i večerní party. Malujeme obličeje i obrazy.">
+    <meta name="keywords" content="uv malování, facepainting, uv barvy, světlo valmez, ksychtíkovo, valašské meziříčí, dětské akce, večerní party, firemní večírky">
+    <meta name="author" content="Ksychtíkovo">
+    <link rel="canonical" href="https://www.ksychtikovo.cz/uv-malovani.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Zářivé UV malování na obličej a tělo | Ksychtíkovo">
+    <meta property="og:description" content="Rozsviťte svou akce s UV barvami od Ksychtíkovo! Ideální na vnitřní akce, večerní party a podzimní Halloweeny.">
+    <meta property="og:image" content="https://www.ksychtikovo.cz/halloween-fun.webp">
+    <meta property="og:url" content="https://www.ksychtikovo.cz/uv-malovani.html">
+    <meta property="og:type" content="article">
+    <meta property="locale" content="cs_CZ">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zářivé UV malování na obličej a tělo | Ksychtíkovo">
+    <meta name="twitter:description" content="Bezpečné EU schválené UV barvy na obličeje i obrazy. Udělejte z vaší akce nezapomenutelnou světelnou show.">
+    <meta name="twitter:image" content="https://www.ksychtikovo.cz/halloween-fun.webp">
+
+    <!-- Structured Data (JSON-LD) for AI Search Engines & Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ksychtíkovo",
+      "description": "Profesionální UV malování na obličej, tělo a obrazy pro dětské akce, večírky a podzimní festivaly.",
+      "url": "https://www.ksychtikovo.cz/",
+      "telephone": "+420728500091",
+      "email": "podmolovam@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valašské Meziříčí",
+        "addressCountry": "CZ"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #ff6600;
+            --primary-dark: #e05500;
+            --accent: #ee855c;
+            --bg-color: #1a1a2e; /* Temnější podklad pro UV atmosféru */
+            --text-color: #e2e8f0;
+            --card-bg: #16213e;
+            --radius: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3460, #e94560);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 8px rgba(233, 69, 96, 0.5);
+        }
+
+        nav {
+            background: #16213e;
+            padding: 15px 20px;
+            text-align: left;
+            max-width: 840px;
+            margin: -20px auto 0;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+            border: 1px solid #0f3460;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e94560;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        article {
+            background: var(--card-bg);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: var(--radius);
+            border: 1px solid #0f3460;
+        }
+
+        .img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        img.main-img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 24px rgba(233, 69, 96, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        img.main-img:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #0f3460;
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #e94560;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #cbd5e0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            color: #cbd5e0;
+        }
+
+        ul li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .highlight-box {
+            background: #1f4068;
+            border-left: 5px solid #e94560;
+            padding: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .costume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .costume-card {
+            background: #0f3460;
+            border: 1px solid #1f4068;
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .costume-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #16213e;
+        }
+
+        .video-box, .event-box {
+            background: #1f4068;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 30px 0;
+            border: 1px dashed #e94560;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 2px dashed #e94560;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        
+        .cta-box h2::after {
+            display: none;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #e94560;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(233, 69, 96, 0.4);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background-color: #ff6600;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 102, 0, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: #16213e;
+            color: #ffffff;
+            border: 2px solid #0f3460;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0f3460;
+            border-color: #e94560;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #0b132b;
+            color: #8fa3bf;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>UV malování: Když akce pod UV světlem doslova ožije!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">← Zpět na hlavní stránku</a>
+    </nav>
+
+    <main>
+        <article>
+            <div class="img-container">
+                <!-- Zde můžeš později nahradit hlavní UV obrázek -->
+                <img src="halloween-fun.webp" alt="UV malování na obličej od Ksychtíkovo" class="main-img" loading="lazy">
+            </div>
+            
+            <p>Plánujete akci, která se koná uvnitř, ve večerních hodinách, nebo chcete party posunout na úplně novou vizuální úroveň? Sázkou na jistotu je **profesionální UV malování** od Ksychtíkovo. Pod UV světlem se obyčejné obličeje a malby promění v zářící neonová umělecká díla, která v tme doslova berou dech.</p>
+
+            <div class="highlight-box">
+                <p><strong>1% bezpečnost na prvním místě:</strong> Pracujeme výhradně se <strong>speciálními UV barvami schválenými v EU</strong>, které jsou šetrné k pokožce, dermatologicky testované a bezpečné pro děti i dospělé.</p>
+            </div>
+
+            <h2>Pro jaké akce se UV malování hodí?</h2>
+            <ul>
+                <li><strong>Dětské akce a karnevaly:</strong> Děti milují zářící barvy a neonové efekty, které jsou na vnitřních akcích obrovským hitem.</li>
+                <li><strong>Večerní party a klubové akce:</strong> Skvělý prvek pro navození nezapomenutelné atmosféry na tanečním parketu.</li>
+                <li><strong>Firemní večírky:</strong> Originální a stylová zábava pro kolegy, která rozproudí každou firemní sešlost.</li>
+                <li><strong>Podzimní halloweenské akce:</strong> V kombinaci s tematikou halloweenu působí zářící kostlivci, dýně a neonové prvky naprosto magicky.</li>
+            </ul>
+
+            <h2>Úspěch, který mluví za vše: Světlo Valmez</h2>
+            <div class="event-box">
+                <h3 style="margin-top: 0; color: #e94560;">💡 Úspěšná akce: Světlo Valmez</h3>
+                <p>Tento program se skvěle osvědčil na velkých akcích – například na velmi úspěšné události <a href="https://www.facebook.com/svetlovalmez" target="_blank" style="color: #ff6600; font-weight: bold;">Světlo Valmez</a>, kde UV malování sklidilo obrovský ohlas u dětí i dospělých návštěvníků.</p>
+                <a href="https://www.facebook.com/svetlovalmez" target="_blank" class="btn btn-secondary" style="margin-top: 10px;">Navštívit Facebook Světlo Valmez ↗</a>
+            </div>
+
+            <h2>Malujeme obličeje i obrazy společně s dětmi</h2>
+            <p>Není to jen o pasivním malování. Během programu **malujeme obli
