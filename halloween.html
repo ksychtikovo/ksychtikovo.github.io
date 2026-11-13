@@ -167,4 +167,252 @@
             font-size: 1.5rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            border-bottom
+            border-bottom: 3px solid #fff3e0;
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        ul li::before {
+            content: "🎃";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .highlight-box {
+            background: #fff8f0;
+            border-left: 5px solid var(--primary);
+            padding: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 30px 0;
+        }
+
+        .costume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .costume-card {
+            background: #fdfaf6;
+            border: 1px solid #fae1cd;
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .costume-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #eee;
+        }
+
+        .video-box {
+            background: #fdf2e9;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 30px 0;
+            border: 1px dashed var(--primary);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #fff9f5, #fff3e0);
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 2px dashed var(--primary);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+        
+        .cta-box h2::after {
+            display: none;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: var(--text-color);
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f7fafc;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #2d3748;
+            color: #cbd5e0;
+            margin-top: 60px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dětský Halloween: Když se strašení mění v barevnou zábavu!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">← Zpět na hlavní stránku</a>
+    </nav>
+
+    <main>
+        <article>
+            <div class="img-container">
+                <img src="halloween-fun.webp" alt="Dětské malování na obličej od Ksychtíkovo" class="main-img" loading="lazy">
+            </div>
+            
+            <p>Vzpomínáte si na ty plastové masky z dětství, pod kterými se člověk dusil a nebylo přes ně vidět? Dnešní dětský Halloween vypadá úplně jinak! Stala se z něj oblíbená událost plná radosti, hravosti a hlavně kreativity, na kterou se děti těší celkem právem.</p>
+
+            <p>Proč děti Halloween tak zbožňují? Mohou se na chvíli proměnit v hrdiny svých příběhů, zažít trochu legrace se strašidelnou tematikou a ukázat svou vlastní fantazii – bez slz a strachu.</p>
+
+            <h2>Nejoblíbenější dětské kostýmy a masky</h2>
+            <p>Děti milují převleky, ve kterých mohou naplno projevit svou osobnost. Mezi absolutní hity na halloweenských oslavách patří:</p>
+
+            <div class="costume-grid">
+                <!-- Karta 1: Dýně -->
+                <div class="costume-card">
+                    <img src="maska-dyne.webp" alt="Dětská maska dýně" loading="lazy">
+                    <h3 style="font-size: 1.1rem; margin: 10px 0 5px;">🎃 Dýně</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Veselá oranžová klasika, která k podzimu neodmyslitelně patří.</p>
+                </div>
+
+                <!-- Karta 2: Čarodějnice -->
+                <div class="costume-card">
+                    <img src="maska-carodejnice.webp" alt="Dětská maska čarodějnice" loading="lazy">
+                    <h3 style="font-size: 1.1rem; margin: 10px 0 5px;">🧙‍♀️ Čarodějnice</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Kouzelné čarodějky s jiskrou v oku, kloboukem a třpytkami.</p>
+                </div>
+
+                <!-- Karta 3: Kostlivec -->
+                <div class="costume-card">
+                    <img src="maska-kostlivec.webp" alt="Dětská maska kostlivec" loading="lazy">
+                    <h3 style="font-size: 1.1rem; margin: 10px 0 5px;">💀 Kostlivec</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Stylová černobílá kombinace pro malé nebojsy.</p>
+                </div>
+
+                <!-- Karta 4: Addams Family -->
+                <div class="costume-card">
+                    <img src="maska-addams.webp" alt="Holčička Wednesday z Addams Family" loading="lazy">
+                    <h3 style="font-size: 1.1rem; margin: 10px 0 5px;">🖤 Addams Family</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Temně elegantní holčičky stylizované do Wednesday s culíky.</p>
+                </div>
+            </div>
+
+            <h2>Další masky, které u dětí bodují</h2>
+            <ul>
+                <li><strong>Roztomilý vlkodlak:</strong> Žádná zlá příšera, ale hravý vlčák, ze kterého budou všichni nadšení.</li>
+                <li><strong>Přátelský duch Casper:</strong> Jemné bílé tóny, hvězdičky a zářivé barvy, které na dětské párty rozzáří každého malého ducha.</li>
+            </ul>
+
+            <h2>Královna dětských masek: Sugar Skull</h2>
+            <p>Mezi dětmi a malými slečnami naprosto vládne také motiv inspirovaný mexickým svátkem Día de los Muertos – **Sugar Skull** (cukrová lebka).</p>
+            
+            <div class="highlight-box">
+                <p><strong>Proč ji děti milují?</strong> Zapomeňte na hrůzostrašné krváky. Sugar Skull je o <strong>barvách, květinách a třpytkách</strong>. Kombinuje jemný základ s pestrobarevnými okvětními lístky kolem očí a hravými ornamenty. Děti si připadají jako princezny z pohádkového podsvětí – originální, stylové a přitom okouzlující.</p>
+            </div>
+
+            <div class="video-box">
+                <h3 style="margin-top: 0; color: #ff6600;">🎥 Podívejte se na video z tvorby!</h3>
+                <p>Chcete vidět, jak taková proměna vzniká pod mými štětci? Mrkněte na mé krátké video přímo na Facebooku:</p>
+                <a href="https://www.facebook.com/reel/1115719957642449?mibextid=wwXIfr" target="_blank" class="btn">Sledovat video na Facebooku ↗</a>
+            </div>
+
+            <div class="cta-box">
+                <h2>Chcete pro děti nezapomenutelnou halloweenskou párty?</h2>
+                <p>Moje barvy jsou bezpečné, hypoalergenní a šetrné k dětské pleti. <strong>Zarezervuj termín včas</strong>, ať mají děti na oslavě to nejlepší facepaintingové kouzlo!</p>
+                
+                <div class="contact-buttons">
+                    <a href="tel:+420728500091" class="btn">📞 Zavolat: +420 728 500 091</a>
+                    <a href="mailto:podmolovam@gmail.com" class="btn btn-secondary">✉️ Napsat e-mail</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Ksychtíkovo - Malování na obličej Valašské Meziříčí</p>
+    </footer>
+
+</body>
+</html>
